@@ -37,6 +37,10 @@ function App() {
     bgColor = "#632b79";
   }
 
+  const restartGame = () => {
+    setCount(90)
+  }
+
   return (
     <>
       <section 
@@ -61,6 +65,21 @@ function App() {
         >
           {buttonText}
         </button>
+        {count >= 210 && (
+          <div className="restart-secton">
+            <p className="restart-text">
+              Would you like to revive Mr. Raccoon?
+            </p>
+
+            <button
+            type="button"
+            className="restart-button"
+            onClick={restartGame}
+            >
+              Revive
+              </button>
+          </div>
+        )}
       </section>
     </>
   )
