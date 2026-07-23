@@ -1,15 +1,27 @@
+.title {
+  -webkit-text-stroke: 2px black;
+  font-weight: bold;
+  font-family: var(--mono);
+}
+
+.text {
+  color: black;
+  font-family: var(--mono);
+}
+
 .counter {
   font-size: 25px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
+  color: #000000;
+  background: #a7f2ff;
+  border: 4px solid;
   transition: border-color 0.3s;
   margin-bottom: 24px;
 
   &:hover {
-    border-color: var(--accent-border);
+    border-color: #3e4ace;
+    color: #3e4ace;
   }
   &:focus-visible {
     outline: 2px solid var(--accent);
@@ -18,6 +30,9 @@
 }
 
 #center {
+  background-color: var(--bg-variable, #ffffff); 
+  transition: background-color 0.2s ease-in-out; 
+
   display: flex;
   flex-direction: column;
   gap: 25px;
